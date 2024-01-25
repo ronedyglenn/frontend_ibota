@@ -1,16 +1,28 @@
-export default function App() {
+import React from 'react'
+import Home from './pages/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Connexion from './pages/Login/Connexion'
+import Sage from './pages/Login/Sage'
+import Agent from './pages/Login/agent'
+import Tableau from './pages/Dashboard/Tableau'
 
 
+function App() {
 
   return (
-    <>
-    <div className="flex flex-col">
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-      <p className="text-blue-600  bg-violet-900">Lorem Ipsum is non non simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-    </div>
-
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ < Home/> } />
+        <Route path="Connexion" element={ <Connexion/> } />
+       <Route path="Sage" element={ <Sage/> }  /> 
+       <Route path="Agent" element={<Agent/>} />
+       <Route path="Agent/Tableau" element={<Tableau/>} />
+      </Routes>    
+    </BrowserRouter>
+  );
+  
 }
+export default App;
+
+
+
