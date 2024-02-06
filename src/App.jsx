@@ -17,6 +17,7 @@ function App() {
        <Route path="Sage" element={ <Sage/> }  /> 
        <Route path="Agent" element={<Agent/>} />
        <Route path="Agent/Tableau" element={<Tableau/>} />
+       <Route path='Agent/Tableau/Fiche' element={<File/>}/>
       </Routes>    
     </BrowserRouter>
   );

@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Messenger() {
     
 
   return (
         <>
-            <nav className="flex-no-wrap relative flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 border border-slate-300 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4">
+            <nav className="flex-no-wrap relative flex w-full items-center justify-between bg-[#FBFBFB] py-2 shadow-md shadow-black/5 dark:bg-neutral-600 border border-slate-300 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4 h-24">
       <div className="flex w-full flex-wrap items-center justify-between px-3">
         <button
           className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
@@ -41,7 +42,7 @@ function Messenger() {
             className="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
             href="#"
           >
-            <img
+            <img className='pb-8'
               src="/src/img/1.png"
               style={{ height: '100px' }}
               alt="TE Logo"
@@ -67,7 +68,7 @@ function Messenger() {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="h-24 w-24"
+                  className="h-30 w-30"
                 >
                   <path
                     fillRule="evenodd"
@@ -131,7 +132,7 @@ function Messenger() {
               aria-expanded="false"
             >
               <img
-                src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+                src="/src/img/7758834-removebg-preview.png"
                 className="rounded-full"
                 style={{ height: '50px', width: '50px' }}
                 alt=""
@@ -177,120 +178,313 @@ function Messenger() {
       </div>
     </nav>
     <div className='flex flex-row justify-between'>
-    <div className=" overflow-y-scroll shadow-xl h-screen w-1.5/4 bg-sky-500 flex-col justify-center mx-4 overscroll-y-hidden">
-    <div className="mb-3 my-4 mx-4">
-      <div className="relative  flex flex-row ">
+        <div className='bg-cyan-200 w-1/4'>
+        <Link to=''><button
+  type="button"
+  class="inline-block rounded-full bg-primary px-6 pb-2 pt-2.5 text-xs mx-3 my-3 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+  Déconnexion
+</button></Link>
+        </div>
+    <header className="bg-white shadow w-3/4 ">
+          
+          <div className="mb-3 mx-3 my-3">
+      <div className="relative mb-4 flex w-full flex-wrap items-stretch">
         <input
+          id="advanced-search-input"
           type="search"
-          className="relative   flex-auto rounded-l border border-solid border-slate-950  bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:invalid:ring-white focus:text-black focus:shadow-[inset_0_0_0_2px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+          className="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
           placeholder="Search"
           aria-label="Search"
-          aria-describedby="button-addon3"
+          aria-describedby="button-addon1"
         />
 
-        {/* Bouton de recherche */}
+        {/* Search button */}
         <button
-          className="relative z-[2] rounded-r border-2 border-primary px-6 py-2 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+          className="relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
           type="button"
-          id="button-addon3"
+          id="advanced-search-button"
           data-te-ripple-init
+          data-te-ripple-color="light"
         >
-          Search
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="h-5 w-5"
+          >
+            <path
+              fillRule="evenodd"
+              d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+              clipRule="evenodd"
+            />
+          </svg>
         </button>
       </div>
     </div>
-                        <h1></h1>
-                        <div className="w-96">
-      <button
-        aria-current="true"
-        type="button"
-        className="block w-full cursor-pointer rounded-lg bg-primary-100 p-4 text-left text-primary-600"
+        <main className='flex justify-center items-center'>
+        <div class="min-w-full bg-white">
+    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-200 data-size large data-[size=large]:p-8">
+                <thead>
+                    <tr>
+                        <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                        <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Position</th>
+                        <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Office</th>
+                        <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact</th>
+                        {/* <!-- Add more th elements here as needed --> */}
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                    <Link to=''><td class="px-6 py-4 whitespace-nowrap">Tiger Nixon</td></Link>
+                        <td class="px-6 py-4 whitespace-nowrap">System Architect</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Edinburgh</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                    <tr>
+                        <Link to=''><td class="px-6 py-4 whitespace-nowrap">Sonya Frost</td></Link>
+                        <td class="px-6 py-4 whitespace-nowrap">Software Engineer</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Edinburgh</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                    <tr>
+                    <Link to=' '><td class="px-6 py-4 whitespace-nowrap">Tatyana Fitzpatrick</td></Link>
+                    <td class="px-6 py-4 whitespace-nowrap">Regional Director</td>
+                    <td class="px-6 py-4 whitespace-nowrap">London</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                    <tr>
+                    <Link to=''><td class="px-6 py-4 whitespace-nowrap">Tiger Nixon</td></Link>
+                        <td class="px-6 py-4 whitespace-nowrap">System Architect</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Edinburgh</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                    <tr >
+                    <Link to='File'><td class="px-6 py-4 whitespace-nowrap">Sonya Frost</td></Link>
+                        <td class="px-6 py-4 whitespace-nowrap">Software Engineer</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Edinburgh</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                    <tr>
+                        <Link to='Agent'><td class="px-6 py-4 whitespace-nowrap">Tatyana Fitzpatrick</td></Link>
+                        <td class="px-6 py-4 whitespace-nowrap">Regional Director</td>
+                        <td class="px-6 py-4 whitespace-nowrap">London</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                    <tr>
+                    <Link to=''><td class="px-6 py-4 whitespace-nowrap">Tiger Nixon</td></Link>
+                        <td class="px-6 py-4 whitespace-nowrap">System Architect</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Edinburgh</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                    <tr>
+                    <Link to=''><td class="px-6 py-4 whitespace-nowrap">Sonya Frost</td></Link>
+                        <td class="px-6 py-4 whitespace-nowrap">Software Engineer</td>
+                        <td class="px-6 py-4 whitespace-nowrap">Edinburgh</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                    <tr>
+                    <Link to=''><td class="px-6 py-4 whitespace-nowrap">Tatyana Fitzpatrick</td></Link>
+                        <td class="px-6 py-4 whitespace-nowrap">Regional Director</td>
+                        <td class="px-6 py-4 whitespace-nowrap">London</td>
+                        <td class="px-6 py-4 whitespace-nowrap flex flex-row gap-5">
+                        <img
+                src="/src/img/telephone.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+              <img
+                src="/src/img/mail.png"
+                className="rounded-full"
+                style={{ height: '40px', width: '40px' }}
+                alt=""
+                loading="lazy"
+              />
+                        </td>
+                        {/* <!-- Add more td elements here as needed --> */}
+                    </tr>
+                </tbody>
+                
+            </table>
+<nav className="float-right">
+  <ul class="list-style-none flex">
+    <li>
+      <a
+        class="pointer-events-none relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-500 transition-all duration-300 dark:text-neutral-400"
+        >Previous</a
       >
-        The current button
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-
-      <button
-        type="button"
-        className="block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200"
+    </li>
+    <li>
+      <a
+        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100  dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+        href="#!"
+        >1</a
       >
-        A second button item
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-
-      <button
-        type="button"
-        className="block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200"
+    </li>
+    <li aria-current="page">
+      <a
+        class="relative block rounded bg-primary-100 px-3 py-1.5 text-sm font-medium text-primary-700 transition-all duration-300"
+        href="#!"
+        >2
+        <span
+          class="absolute -m-px h-px w-px overflow-hidden whitespace-nowrap border-0 p-0 [clip:rect(0,0,0,0)]"
+          >(current)</span
+        >
+      </a>
+    </li>
+    <li>
+      <a
+        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+        href="#!"
+        >3</a
       >
-        A third button item
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-
-      <button
-        type="button"
-        className="block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200"
+    </li>
+    <li>
+      <a
+        class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
+        href="#!"
+        >Next</a
       >
-        A fourth button item
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-
-      <button
-        disabled=""
-        type="button"
-        className="block w-full cursor-default p-4 text-left text-neutral-500 focus:outline-none focus:ring-0"
-      >
-        A disabled button item
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-      
-    
-      
-
-      <button
-        type="button"
-        className="block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200"
-      >
-        A second button item
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-
-      <button
-        type="button"
-        className="block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200"
-      >
-        A third button item
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-
-      <button
-        type="button"
-        className="block w-full cursor-pointer rounded-lg p-4 text-left transition duration-500 hover:bg-neutral-100 hover:text-neutral-500 focus:bg-neutral-100 focus:text-neutral-500 focus:ring-0 dark:hover:bg-neutral-600 dark:hover:text-neutral-200 dark:focus:bg-neutral-600 dark:focus:text-neutral-200"
-      >
-        A fourth button item
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-
-      <button
-        disabled=""
-        type="button"
-        className="block w-full cursor-default p-4 text-left text-neutral-500 focus:outline-none focus:ring-0"
-      >
-        A disabled button item
-      </button>
-      <span className="inline-block min-h-[0.1em] w-9/12 cursor-wait bg-current align-middle text-base text-neutral-700 opacity-50 dark:text-neutral-50"></span>
-
-
+    </li>
+  </ul>
+</nav>
+        </div>
     </div>
-                      
-                  </div>
-    <header className="bg-white shadow w-3/4">
-          <div className=" bg-cyan-600 h-32 rounded-md">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-          </div>
-        </header>
-        <main>
-          <div className="">{/* Your content */}</div>
+</div>
+
         </main>
+        </header>
     </div>
     
             
